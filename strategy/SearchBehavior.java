@@ -1,3 +1,5 @@
+package strategy;
+
 import java.util.ArrayList;
 /*
  * Interface for the 2 types of search
