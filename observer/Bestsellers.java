@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BestSellers implements Subject {
     
-    private ArrayList<Observer> observers;
+    private static ArrayList<Observer> observers;
     private ArrayList<Book> bestSellers;
 
     public BestSellers() {
@@ -12,15 +12,17 @@ public class BestSellers implements Subject {
     }
 
     public static void registerObserver(Observer observer) {
-
+        observers.add(observer);
     }
 
     public static void removeObserver(Observer observer) {
-
+        observers.remove(Observer observer);
     }
 
     public static void notifyObservers(Book book) {
-
+        for (int i=0;i<bestSellers.size();i++) {
+            bestSellers.get().update(book);
+        }
     }
 
     public static void addBook(Book book) {

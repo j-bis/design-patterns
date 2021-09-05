@@ -23,8 +23,9 @@ public class Customer implements Observer {
      * @return returns tostring of all books in wishList
      */
     public static void display() {
+        System.out.println("\nWish List:");
         for (int i=0;i<wishList.size();i++) {
-            System.out.println(wishList.get(i).toString());
+            System.out.println(" - " + wishList.get(i).toString());
         }
     }
 }
