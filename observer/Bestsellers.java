@@ -4,28 +4,33 @@ import java.util.ArrayList;
 
 public class BestSellers implements Subject {
     
-    private static ArrayList<Observer> observers;
+    private ArrayList<Observer> observers;
     private ArrayList<Book> bestSellers;
 
     public BestSellers() {
-        
+        observers = new ArrayList<Observer>();
     }
 
-    public static void registerObserver(Observer observer) {
+    @Override
+    public void registerObserver(Observer observer) {
         observers.add(observer);
     }
 
-    public static void removeObserver(Observer observer) {
-        observers.remove(Observer observer);
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
     }
 
-    public static void notifyObservers(Book book) {
-        for (int i=0;i<bestSellers.size();i++) {
-            bestSellers.get().update(book);
+    public void notifyObservers(Book book) {
+        for(int i=0;i<observers.size();i++) {
+            observers.get(i).update(book);            
         }
     }
 
-    public static void addBook(Book book) {
-        bestSellers.add(book);
+    public void addBook(Book book) {
+        //for(int i=0;i<observers.size();i++) {
+        //    bestSellers.get(i).add(book);            
+        //}
+        //bestSellers.add(book);
+        notifyObservers(book);
     }
 }

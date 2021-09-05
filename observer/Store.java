@@ -1,30 +1,27 @@
 package observer;
 
 import java.util.Queue;
+import java.util.LinkedList;
 
 public class Store implements Observer {
 
     private Subject subject;
     private String title;
-    private static Queue<Book> bestSellers;
-    private static int bookcount = 0;
+    private Queue<Book> bestSellers = new LinkedList<>();
 
     public Store(Subject subject) {
-        this.subject = subject;
-
+        this.subject = subject;        
+        subject.registerObserver(this);
     }
 
-    public static void update(Book book) {
-        if (bookcount < 5) {
-            bestSellers.add(book);
+    public void update(Book book) {
+        bestSellers.add(book);
+        if (bestSellers.size()>5) {
+            bestSellers.remove();
         }
-        else {
-            BestSellers.removeObserver(this.Store);
-        }
-        bookcount++;
     }
 
-    public static void display() {
+    public void display() {
         System.out.println("Top 5 Best Sellers:");
         while (bestSellers.peek() != null) {
             System.out.println(" - " + bestSellers.poll().toString());
