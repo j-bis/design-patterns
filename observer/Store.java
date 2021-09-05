@@ -1,5 +1,7 @@
 package observer;
 
+import java.util.Queue;
+
 public class Store implements Observer {
 
     private Subject subject;
@@ -7,7 +9,7 @@ public class Store implements Observer {
     private Queue<Book> bestSellers;
 
     public Store(Subject subject) {
-
+        this.subject = subject;
     }
 
     public static void update(Book book) {

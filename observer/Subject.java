@@ -1,5 +1,7 @@
 package observer;
 
+import java.util.ArrayList;
+
 public interface Subject {
 
     public static void registerObserver(Observer observer) {

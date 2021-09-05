@@ -24,7 +24,7 @@ public class Book {
         return this.authorLastName;
     }
 
-    public string toString() {
-        
+    public String toString() {
+        return this.title + " by: " + this.authorFirstName + " " + this.authorLastName;
     }
 }

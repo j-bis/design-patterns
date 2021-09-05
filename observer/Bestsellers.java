@@ -1,12 +1,14 @@
 package observer;
 
+import java.util.ArrayList;
+
 public class BestSellers implements Subject {
     
     private ArrayList<Observer> observers;
     private ArrayList<Book> bestSellers;
 
     public BestSellers() {
-
+        
     }
 
     public static void registerObserver(Observer observer) {
@@ -22,6 +24,6 @@ public class BestSellers implements Subject {
     }
 
     public static void addBook(Book book) {
-
+        bestSellers.add(book);
     }
 }
