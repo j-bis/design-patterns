@@ -1,9 +1,15 @@
 package decorator;
-
+/**
+ * class that takes extra details and puts them into the character through customize call
+ */
 public abstract class CharacterDecorator extends Character {
 
     protected Character character;
-
+    /**
+     * takes inputted character, copies details in arraylist to one in this constructor 
+     * and calls customize with this type of CharacterDecorator
+     * @param character the character (PotatoeHead) that will be modified
+     */
     public CharacterDecorator(Character character) {
         super();
         this.character = character;
@@ -15,6 +21,8 @@ public abstract class CharacterDecorator extends Character {
         //character has a "character." 
         //character decorator is "this."
     }
-
+    /**
+     * does nothing because its superclass
+     */
     public abstract void customize();
 }
