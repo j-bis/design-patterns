@@ -1,5 +1,9 @@
 package decorator;
 
-public class PotatoeHead {
+public class PotatoeHead extends Character {
+    
+    public PotatoeHead() {
+
+    }
     
 }
