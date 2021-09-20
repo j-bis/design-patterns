@@ -1,6 +1,7 @@
 /**
  * Runs the housing plans program
  */
+package factory;
 public class HousePlanDriver {
 
     /**
