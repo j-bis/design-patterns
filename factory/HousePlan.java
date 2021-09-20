@@ -11,12 +11,12 @@ public abstract class HousePlan {
     private int squareFeet;
 
     public HousePlan(int numRooms, int numWindows, int squareFeet) {
-        //super();
+        super();
         this.numRooms = numRooms;
         this.numWindows = numWindows;
         this.squareFeet = squareFeet;
-        setFeatures();
-        setMaterials();
+        //setFeatures();
+        //setMaterials();
     }
 
     protected abstract void setMaterials();

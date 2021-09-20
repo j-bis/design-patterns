@@ -9,13 +9,16 @@ public class LogCabinPlan extends HousePlan {
     }
 
     protected void setMaterials() {
-        this.materials.set(0," - Log Siding \n - Board and Batten Siding \n - White Pine");
+        //this.materials.set(0," - Log Siding \n - Board and Batten Siding \n - White Pine");
+        this.materials.add(" - Log Siding \n - Board and Batten Siding \n - White Pine");
     }
 
     protected void setFeatures() {
-        this.features.set(0," - Timbered Roof \n - High Insulation \n - Rustic Effect");
+        //this.features.set(0," - Timbered Roof \n - High Insulation \n - Rustic Effect");
+        this.features.add(" - Timbered Roof \n - High Insulation \n - Rustic Effect");
+
     }
     public String toString() {
-        return "Log Cabin";//"Materials:\n" + this.materials.get(0) + "\n\nFeatures:\n" + this.features.get(0);
+        return "Log Cabin\n" + super.toString() + "\n";//"Materials:\n" + this.materials.get(0) + "\n\nFeatures:\n" + this.features.get(0);
     }
 }
