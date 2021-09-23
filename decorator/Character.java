@@ -9,7 +9,7 @@ import java.util.*;
 
 public abstract class Character {
 
-    protected ArrayList<String> sections = new ArrayList();
+    protected ArrayList<String> sections = new ArrayList<String>();
     /**
      * basic constructor used by extending classes
      */
