@@ -19,6 +19,8 @@ public class FlightIterator implements Iterator {
      * checks array to make sure there is another flight in the array
      */
     public boolean hasNext() {
+        //return position < flights.length && flights[position] !== null
+        //for better look, doesnt need if else block
         if (position >= flights.length || flights[position] == null) {
             return false;
         }
