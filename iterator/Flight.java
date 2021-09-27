@@ -16,22 +16,41 @@ public class Flight {
     }
 
     public String getFrom() {
-        return "";
+        return this.from;
     }
 
     public String getTo() {
-        return "";
+        return this.to;
     }
-
+    /**
+     * returns the duration of the trip in this instance as an int
+     * looking at this and doing javadoc I realize I should've changed it to a 
+     * string return and had it return the duration already formatted
+     * @return
+     */
     public int getDuration() {
-        return 0;
+        // int hours = (this.duration-this.duration%60)/60;
+        // int minutes = this.duration%60;
+        return this.duration;
     }
 
     public int getNumTransfers() {
-        return 0;
+        return this.transfers;
     }
 
     public String toString() {
-        return "";
+        if (getNumTransfers()>1) {
+            return "Flight Number: " + this.flightNum + "\nFrom: " + getFrom() 
+            + "\nTo: " + getTo() + "\nDuration: " + (getDuration()-getDuration()%60)/60 
+            + " hours " + getDuration()%60 + " minutes\n" + getNumTransfers() + " Transfers";
+        }
+        else if (getNumTransfers() == 0) {
+            return "Flight Number: " + this.flightNum + "\nFrom: " + getFrom()
+            + "\nTo: " + getTo() + "\nDuration: " + (getDuration()-getDuration()%60)/60 
+            + " hours " + getDuration()%60 + " minutes" + "\nDirect Flight";
+        }
+        return "Flight Number: " + this.flightNum + "\nFrom: " + getFrom()
+        + "\nTo: " + getTo() + "\nDuration: " + (getDuration()-getDuration()%60)/60 
+        + " hours " + getDuration()%60 + " minutes\n" + getNumTransfers() + " Transfer";
     }
 }
