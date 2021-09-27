@@ -1,6 +1,8 @@
 package iterator;
 import java.util.Iterator;
-
+/**
+ * driver provided by Portia Plante for iterator assignment
+ */
 public class AirlineDriver {
    
     public AirlineDriver(){
