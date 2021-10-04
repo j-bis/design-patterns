@@ -9,10 +9,10 @@ public class Question {
     public Question(String question, String ans1, String ans2, String ans3, String ans4, int correctAnswer) {
         this.question = question;
         this.correctAnswer = correctAnswer;
-        answers[0] = ans1;
-        answers[1] = ans2;
-        answers[2] = ans3;
-        answers[3] = ans4;
+        this.answers[0] = ans1;
+        this.answers[1] = ans2;
+        this.answers[2] = ans3;
+        this.answers[3] = ans4;
     }
 
     public String toString() {
