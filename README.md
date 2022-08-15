@@ -1,2 +1,1 @@
-# design-patterns
-patterns for the design of something i guess
+# design patterns for creating extendable systems and professional programming practices
